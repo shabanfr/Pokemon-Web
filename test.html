@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+
+#mydiv{
+	height: 50px;
+	width: 50px;
+	background-color: #000;
+	position: absolute;
+	top: 50px;
+}
+
+</style>
+
+</head>
+
+<body>
+<div id="mydiv"></div>
+<button onclick="draw(5)">clique</button>
+
+<script>
+var requestAnimationFrame = function(){
+    return window.requestAnimationFrame    || 
+           window.webkitRequestAnimationFrame || 
+           window.mozRequestAnimationFrame    || 
+           window.oRequestAnimationFrame      || 
+           window.msRequestAnimationFrame     || 
+           function(callback, element){
+               setTimeout(function(){ callback((new Date).getTime()); }, 1000/60);
+           }
+       }
+
+var speed = 60; // pixels per second
+var calc = speed/1000;
+var player = document.getElementById('mydiv');
+var start_time = (new Date).getTime();
+
+function draw(time){
+    var pos = (time - start_time)*calc;
+
+    player.style.left = pos + 'px';
+
+    requestAnimationFrame(draw);
+}
+
+
+
+</script>
+
+</body>
+</html>	

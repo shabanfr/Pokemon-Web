@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Pokemon GB";
+    src: url("Pokemon_GB.eot?") format("eot"),url("Pokemon_GB.woff") format("woff"),url("Pokemon_GB.ttf") format("truetype"),url("Pokemon_GB.svg#PokemonGB") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+video {
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: "Pokemon GB";
+    transition: background 0.5s;
+}
+
+input {
+    border: 2px solid #98c4d2;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Pokemon GB";
+}
+
+#pokemon {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+}
+
+#login {
+    place-self: center;
+}
+
+#teste {
+    background-image: url("loader.svg");
+    height: 50vh;
+    width: 50vh;
+    place-self: center;
+}
+
+button,input[type="submit"] {
+    background-color: #82adbb;
+    border: 2px solid #98c4d2;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+    color: #effbff;
+}
+
+#map {
+    height: 385px;
+    width: 385px;
+    background-image: url(map.png);
+    background-position: -960px -3370px;
+    place-self: center;
+    border: 1px solid #FFF;
+    box-sizing: border-box;
+}
+
+#player-skin {
+    position: absolute;
+    height: 23px;
+    width: 15px;
+    top: calc(50% - 23px);
+    left: calc(50% - 15px);
+    background-image: url("player.png");
+    z-index: 1;
+}
